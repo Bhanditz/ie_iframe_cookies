@@ -1,7 +1,7 @@
 require File.expand_path('../test_helper', __FILE__)
 
 class IETestController < ActionController::Base
-  before_filter :normal_cookies_for_ie_in_iframes!, :only => :activate
+  before_action :normal_cookies_for_ie_in_iframes!, :only => :activate
 
   def activate
     render :text => 'OK'
