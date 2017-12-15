@@ -2,7 +2,7 @@ require 'action_pack'
 
 module ActionController
   class Base
-    before_filter :normal_cookies_for_ie_in_iframes
+    before_action :normal_cookies_for_ie_in_iframes
 
     def normal_cookies_for_ie_in_iframes!
       if request.ie_iframe_cookies_browser_is_ie?
